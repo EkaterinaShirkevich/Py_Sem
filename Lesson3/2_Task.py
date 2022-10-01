@@ -2,10 +2,7 @@
 #    Напишите программу, которая определит индекс второго вхождения строки в списке
 #    либо сообщит, что её нет.
 
-from cgitb import reset
-from itertools import count
 from random import choices
-from unittest import result
 
 def form_word_list(count, source): # кол-во эл-тов и исходное слово - последовательность
     result = []
@@ -21,11 +18,10 @@ def find_second_encounter(word, words_list):
     else:
         print("-1")
 
-count, source = int(input()), input()
+count, source = int(input("Enter count of combinations: ")), input("Enter original sequence: ")
 words = form_word_list(count, source)
 print(words)
-4
-find_second_encounter(input(), words)
+find_second_encounter(input("Enter desired sequence: "), words)
 
 
 
