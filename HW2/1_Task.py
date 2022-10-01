@@ -10,3 +10,5 @@ while num > 0:
     num //= 10
 print(int(sum))
 
+#  вариант более компактный:
+# # print(sum(map(int, list(input("Введите дробное число: ").replace(".", "")))))

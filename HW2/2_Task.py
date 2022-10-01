@@ -8,3 +8,8 @@ for i in range(2, N+2):
     list.append(digit)
     digit *= i
 print(list)
+
+# другой вариант:
+# for i in range(num):
+#   sum *= i + 1
+#   print(sum, end=",")
