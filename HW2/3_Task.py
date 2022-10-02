@@ -14,8 +14,9 @@ for i in ls:
     sum += i
 print(sum)
 
-# без ыторого цикла, с созданием доп переменной result
+# без второго цикла, с созданием доп переменной result
 # for i in range(1, len + 1):
-#   result = ls.append(round((1 + 1/len) ** len, 2))
+#   result =  round((1 + 1/i) ** i, 2)
+#   ls.append(result)
 #   sum += result
 #print(sum)
