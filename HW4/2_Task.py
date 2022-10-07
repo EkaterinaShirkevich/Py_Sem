@@ -9,8 +9,8 @@ import math
 
 
 def fact (num: int):
-    if num == 0:
-        return ("None (try to enter correct number)")
+    if num <= 0:
+        return ("Error (try to enter correct number)")
     ls = []
     while num % 2 == 0:
            ls.append(2)
