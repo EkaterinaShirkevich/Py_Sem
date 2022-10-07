@@ -4,3 +4,24 @@
 # 54
 # out
 # [2, 3, 3, 3]
+
+import math
+
+
+def fact (num: int):
+    if num == 0:
+        return ("None (try to enter correct number)")
+    ls = []
+    while num % 2 == 0:
+           ls.append(2)
+           num //= 2
+    for i in range(3, int(math.sqrt(num)) + 1, 2):
+        while num % i == 0:
+            ls.append(i)
+            num //= i
+    if num > 2:
+        ls.append(num)           
+    return ls
+    
+num = int(input("Enter the number: "))
+print(f"Factorize for {num} is {fact(num)}")            
