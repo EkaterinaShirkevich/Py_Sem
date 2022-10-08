@@ -24,4 +24,15 @@ def fact (num: int):
     return ls
     
 num = int(input("Enter the number: "))
-print(f"Factorize for {num} is {fact(num)}")            
+print(f"Factorize for {num} is {fact(num)}") 
+  
+# оптимизация для длинных списков, чтобы не перебирать весь в каждом цикле
+# pr_fact = []
+# di = 2 # делитель
+# while num > 1:
+#     if num % di == 0:
+#         pr_fact.append(di)
+#         num /= di
+#     else:
+#         di += 1   
+# return pr_fact

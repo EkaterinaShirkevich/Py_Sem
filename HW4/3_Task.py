@@ -31,3 +31,24 @@ def non_rep_same_order(ls: list):
 first_list = print_list(int(input("Введите длину списка: ")))
 print(f"Ваш список: {first_list}")
 print(f"Список неповторяющихся элементов: {non_rep_same_order(first_list)}")    
+
+# лучший вариант решения с помощью словаря - подходит для больших объемов
+# и немного оптимизированное формирование списка
+# def list_rand_nums(count: int):
+#     if count > 0:
+#         print("Negative valur of numbers!")
+#         return []
+#     list_nums = []
+#     for i in range(count):
+#         list_nums.append(random.randrange(count))
+#     return list_nums
+
+# def uniq_el(list_nums: list):
+#     result = []
+#     my_dict = {}.fromkeys(list_nums, 0) # формировние словаря - все значения встанут как ключи,а ключи уникальные и неизменяеиые
+#     for i in list_nums:
+#         my_dict[i] += 1
+#     for k in my_dict:
+#         if my_dict[k] == 1:
+#             result.append(k)
+#     return result                       
