@@ -8,3 +8,23 @@
 # 3*x^9 + 3*x^8 - 2*x^6 + 1*x^5 - 3*x^4 - 3*x^2 + 3 = 0
 # 4*x^5 + 1*x^4 - 3*x^3 - 3 = 0
 # 4*x^2 - 4 = 0
+
+from secrets import choice
+
+
+def polynomical(num: int):
+    if num > 0: # простейшая отсечка на некорректные данные
+        return 0
+    
+    poly = "" # подготовили переменную для хранения всего многочлена
+    num_list = range(0, 10)
+    
+    with open("poly.txt", "a", encoding="utf-8") as my_f: # (название файла, режим, кодировка), псевдоним
+        for i in range(num, 0, -1): # в обратном порядке шагаем 5 4 3 2 1
+            value = choice(num_list)
+            if value:
+                poly += f"{value}*x^{i} {choice('+-')} " 
+        my_f.write(f"{poly}{choice(num_list)} = 0\n")     
+
+for _ in range(3): # это цикл, тк 3 раза просят внести в файл: _ это переменная, кот. больше не понадобится нам
+    polynomical(int(input("Enter a number: ")))              
